@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<header>
+    <div class="header">
+        <img class="logo" src="/images/logo.png">
+
+        <button class="kontakt">Kontaktujte nás</button>
+    </div>
+
+    <div>
+        <img class="hero" src="/images/">
+
+        <h1>{{ title }}</h1>
+    </div>
+
+    <nav class="menu">
+        <ul class="menu__list">
+            <li class="menu__item"><a href="/" class="menu__link">Jak do toho</a></li>
+            <li class="menu__item"><a href="/slovnicek" class="menu__link">Slovníček</a></li>
+            <li class="menu__item"><a href="/typy_karticek" class="menu__link">Typy kartiček</a></li>
+            <li class="menu__item"><a href="/skladovani" class="menu__link">Skladování</a></li>
+            <li class="menu__item"><a href="/grading" class="menu__link">Grading</a></li>
+            <li class="menu__item"><a href="/kontakty" class="menu__link">Kontakty</a></li>
+        </ul>
+    </nav>
+</header>	
+
+<body>
+
+    {{content | safe}}
+
+</body>
+
+<footer class="footer">
+    skills4hockey, 2025
+</footer>
+
+</html>

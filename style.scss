@@ -1,0 +1,42 @@
+
+
+.header {
+    display: flex;
+    flex: 1 0 100%;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 80px;
+}
+
+.menu__list {
+    margin: 0;  
+    padding: 0; 
+    list-style: none;    
+    display: flex;
+    background-color: rgb(17, 5, 147);
+   
+    
+}
+
+.menu__item {    
+    flex: 1 1 calc(100% / 6);
+}
+
+.menu__link {
+    text-decoration: none;
+     color: white;
+     font-size: 24px;
+}
+
+
+body {
+  background-color: rgb(100, 139, 228);
+}
+
+.footer {
+    justify-content: center;
+    background-color: rgb(43, 40, 40);
+    color: white;
+}
