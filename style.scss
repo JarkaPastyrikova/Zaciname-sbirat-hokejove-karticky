@@ -1,14 +1,15 @@
 
-$color1:  #222;
-$color2:  rgb(5, 5, 167) ; 
-$color3:  rgb(239, 230, 181); 
-$color4:  rgb(160, 221, 232);
-$color5:  #f7f7f7;
-$color6:  #d62839;
-$color7:  #fff;
-$color8:  #e63946;
-$color9:  #1d3557;
-$color10: #a8dadc
+// 🎨 Barevná paleta
+$color1:  #222;              // primární text
+$color2:  rgb(5, 5, 167);    // zvýraznění (modrá)
+$color3:  rgb(239, 230, 181); // jemný béžový podklad
+$color4:  rgb(160, 221, 232); // světle modrá (pozadí bloků)
+$color5:  #f7f7f7;           // světlé pozadí
+$color6:  #d62839;           // červená - akce
+$color7:  #fff;              // bílá
+$color8:  #e63946;           // tmavší červená
+$color9:  #1d3557;           // tmavá modrá
+$color10: #a8dadc;           // tyrkys
 
 
 
@@ -134,11 +135,129 @@ main {
   box-shadow: 0 0 10px rgba(0,0,0,0.05);
 }
 
+//stranka Jak do toho
+.intro {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 1rem;
+  font-size: 1.2rem;
+  text-align: center;
+  color: $color9;
+}
+
+.tipy {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto 4rem;
+  padding: 1rem;
+}
+
+.tip {
+  background-color: $color4;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-left: 6px solid $color2;
+}
+
+.tip:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.tip h3 {
+  margin-top: 0;
+  color: $color2;
+  font-size: 1.25rem;
+}
+
+.tip p {
+  margin-bottom: 0;
+  font-size: 1rem;
+  color: $color1;
+}
+
+
+@media (max-width: 768px) {
+  .tipy {
+    grid-template-columns: 1fr;
+  }
+
+  .banner__tittle {
+    font-size: 2rem;
+    text-align: center;
+  }
+}
+
+// Stránka Slovníček
+.glossary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+/*.glossary__item {
+  background-color: $color10; // světle modrá
+  //border: 2px solid lighten($color9, 20%);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  border-color: darken($color4, 10%);*/
+
+  .glossary__item {
+  position: relative;
+  padding-left: 3.5rem;
+
+  .glossary__icon {
+    position: absolute;
+    top: 1.2rem;
+    left: 1rem;
+    width: 2rem;
+    height: 2rem;
+    color: $color9;
+
+    svg {
+      width: 100%;
+      height: 100%;
+      stroke-width: 1.8;
+    }
+  }
+}
+
+  h3 {
+    color: $color9;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    color: $color1;
+    margin: 0;
+    font-size: 1rem;
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+}
+
+
+
+
+
 
 .footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #f1f1f1;
-    color: #666;
-    font-size: 1rem;
+  background-color: $color9;
+  color: $color7;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
 }
