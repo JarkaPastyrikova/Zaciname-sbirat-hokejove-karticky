@@ -5,21 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{title}}</title>
     <link rel="stylesheet" href="/css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <header class="header">
-        <div class="header__top">
-            <img class="logo" src="/images/skills4hockey.png"><a href="https://www.skills4hockey.ch/cs"> </a>
+    <header >
+        <div class="header">
+            <img class="logo" src="/images/skills4hockey.png"><a href="https://www.skills4hockey.ch/cs"></a>
 
-            <button class="header__button">Kontaktujte nás</button>
+            <button class="kontakt">Kontaktujte nás</button>
         </div>
 
-        <div class="header__banner">
-
-            <h1 class="banner__tittle">{{ title }}</h1>
+        <div class="banner">
+            <h1>{{ title }}</h1>
         </div>
 
         <nav class="menu">
@@ -34,16 +32,14 @@
         </nav>
     </header>	
 
-  <main class="main">
+    <main>
 
-    {{ content | safe }}
+        {{content | safe}}
 
-  </main>
-
+    </main>
 
     <footer class="footer">
-    <p> &copy; 2025, skills4hockey</p>
-        
+        <p> &copy; 2025, skills4hockey</p>
     </footer>
 </body>
 
