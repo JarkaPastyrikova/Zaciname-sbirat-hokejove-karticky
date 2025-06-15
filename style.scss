@@ -26,7 +26,7 @@ body {
   line-height: 1.6;
 }
 
-a {
+.menu a {
   text-decoration: none;
   color: inherit;
 }
@@ -95,27 +95,27 @@ a {
 
 
 .menu__list {
-    margin: 0;  
-    padding: 1rem; 
-    list-style: none;    
-    display: flex;
-    background-color: $color9;
-    font-weight: 300; 
-    flex-wrap: wrap;      
+  margin: 0;  
+  padding: 1rem; 
+  list-style: none;    
+  display: flex;
+  background-color: $color9;
+  font-weight: 300; 
+  flex-wrap: wrap;      
 }
 
 .menu__item {    
-    flex: 1 1 calc(100% / 6);
-    text-align: center;
+  flex: 1 1 calc(100% / 6);
+  text-align: center;
 }
 
 .menu__link {
-    text-decoration: none;
-    color: $color7;
-    font-size: 24px;
-    margin: 0 1rem;
-    font-weight: 500;
-    transition: color 0.3s ease;
+  text-decoration: none;
+  color: $color7;
+  font-size: 24px;
+  margin: 0 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
 
 }
   
@@ -124,7 +124,7 @@ a {
 }
 
 body {
-    background-color: $color4;
+  background-color: $color4;
 }
 
 main {
@@ -193,89 +193,62 @@ main {
 }
 
 // Stránka Slovníček
-.glossary {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 2rem auto;
-  padding: 1rem;
+
+
+&:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-/*.glossary__item {
-  background-color: $color10; // světle modrá
-  //border: 2px solid lighten($color9, 20%);
-  border-radius: 1rem;
-  padding: 1.5rem;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s ease, box-shadow 0.3s ease;
-  border-color: darken($color4, 10%);*/
+  // vycentrování posledního boxu, pokud zůstane lichý počet - nefunguje
+& > .tip:nth-last-child(1):nth-child(odd) {
+  grid-column: 1 / -1;
+  justify-self: center;
+  max-width: 48%;
+}
 
-  .glossary__item {
-  position: relative;
-  padding-left: 3.5rem;
 
-  .glossary__icon {
-    position: absolute;
-    top: 1.2rem;
-    left: 1rem;
-    width: 2rem;
-    height: 2rem;
-    color: $color9;
+@media (max-width: 768px) {
+  .tipy {
+    grid-template-columns: 1fr;
 
-    svg {
-      width: 100%;
-      height: 100%;
-      stroke-width: 1.8;
+    // v mobilu centrování není třeba
+    & > .tip:nth-last-child(1):nth-child(odd) {
+      grid-column: auto;
+      justify-self: stretch;
+      max-width: 100%;
     }
   }
 }
 
-  h3 {
-    color: $color9;
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
-  }
-
-  p {
-    color: $color1;
-    margin: 0;
-    font-size: 1rem;
-  }
-
-  /*&:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  }*/
-
 
 // Stránka Typy karet
 .intro {
-  text-align: center;
-  max-width: 700px;
-  margin: 0 auto 2rem auto;
+text-align: center;
+max-width: 700px;
+margin: 0 auto 2rem auto;
 
-  h2 {
-    font-size: 2.2rem;
-    color: $color2;
-  }
-
-  p {
-    font-size: 1.1rem;
-    color: $color1;
-  }
+h2 {
+  font-size: 2.2rem;
+  color: $color2;
 }
 
-./*card-types__list {
-  display: grid;
-  gap: 5rem;
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 1rem;
+p {
+  font-size: 1.1rem;
+  color: $color1;
+}
+}
 
-  @media (min-width: 700px) {
-    grid-template-columns: 1fr 1fr;
-  }
+/*card-types__list {
+display: grid;
+gap: 5rem;
+max-width: 800px;
+margin: 2rem auto;
+padding: 1rem;
+
+@media (min-width: 700px) {
+  grid-template-columns: 1fr 1fr;
+}
 }*/
 
 
