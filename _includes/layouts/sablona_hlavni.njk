@@ -6,20 +6,24 @@
     <title>{{title}}</title>
     <link rel="stylesheet" href="/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
 
     <header class="header">
         <div class="header__top">
+         <a href="https://www.skills4hockey.ch/cs">
             <img class="logo" src="/images/skills4hockey.png"><a href="https://www.skills4hockey.ch/cs"> </a>
 
             <button class="header__button">Kontaktujte nás</button>
         </div>
 
-        <div class="header__banner">
-
+        <div class="header__banner" style="background-image: url('{{ banner | default("/images/jesse_owens.webp") }}');">
+         <div class="header__banner__overlay">
             <h1 class="banner__tittle">{{ title }}</h1>
+         </div>
+    
         </div>
 
         <nav class="menu">
@@ -41,9 +45,28 @@
   </main>
 
 
-  <footer class="footer">
-    <p class="footer"> &copy; 2025, skills4hockey</p>
-  </footer>
-</body>"
+    <footer class="footer">
+        <p class="footer__copy"> &copy; 2025, skills4hockey</p>
+
+        <div class="footer__social">
+            <a class="footer__icon" href="https://www.facebook.com/skills4hockey" target="_blank" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+            </a>
+            <a class="footer__icon" href="https://twitter.com/skills4hockey" target="_blank" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+            </a>
+            <a class="footer__icon" href="https://instagram.com/skills4hockey" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+            </a>
+            <a class="footer__icon" href="https://linkedin.com/company/skills4hockey" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a class="footer__icon" href="https://youtube.com/@skills4hockey" target="_blank" aria-label="YouTube">
+            <i class="fab fa-youtube"></i>
+            </a>
+        </div>
+    </footer>
+
+</body>
 
 </html>

@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   box-sizing: border-box;
   margin: 0;
@@ -8,13 +7,13 @@
 body {
   font-family: "Rubik", sans-serif;
   color: #222;
-  background-color: #f7f7f7;
+  background-color: rgb(160, 221, 232);
   line-height: 1.6;
 }
 
-a {
+.menu a {
   text-decoration: none;
-  color: inherit;
+  color: #fff;
 }
 
 .header__top {
@@ -45,10 +44,9 @@ a {
 }
 
 .banner {
-  background-image: url("/images/2022-23_NHL_Player_Cards.png");
   background-size: cover;
   background-position: center;
-  height: 300px; /* nebo jiná výška */
+  height: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -57,7 +55,6 @@ a {
 }
 
 .header__banner {
-  background-image: url("/images/jesse_owens.webp");
   background-size: cover;
   background-position: center;
   height: 300px;
@@ -65,19 +62,31 @@ a {
 }
 
 .header__banner__overlay {
-  background: rgba(0, 0, 0, 0.4);
-  height: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
+  height: 100%;
+  padding: 2rem;
 }
 
 .banner__title {
   color: #fff;
-  font-size: 2.5rem;
-  text-shadow: 0 0 10px #222;
+  font-size: 3rem;
+  max-width: 80%;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+  font-weight: 700;
+  line-height: 1.3;
+  background-color: rgba(0, 0, 0, 0.4);
+  margin-top: 3rem;
+  position: static;
 }
 
+@media (max-width: 768px) {
+  .banner__title {
+    font-size: 2rem;
+    padding: 0.5rem;
+  }
+}
 .menu__list {
   margin: 0;
   padding: 1rem;
@@ -104,10 +113,6 @@ a {
 
 .menu__link:hover {
   color: #a8dadc;
-}
-
-body {
-  background-color: rgb(160, 221, 232);
 }
 
 main {
@@ -171,112 +176,136 @@ main {
     text-align: center;
   }
 }
-.glossary {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 2rem auto;
-  padding: 1rem;
+.tip:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
-
-/*.glossary__item {
-  background-color: $color10; // světle modrá
-  //border: 2px solid lighten($color9, 20%);
-  border-radius: 1rem;
-  padding: 1.5rem;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s ease, box-shadow 0.3s ease;
-  border-color: darken($color4, 10%);*/
-.glossary__item {
-  position: relative;
-  padding-left: 3.5rem;
-}
-.glossary__item .glossary__icon {
-  position: absolute;
-  top: 1.2rem;
-  left: 1rem;
-  width: 2rem;
-  height: 2rem;
-  color: #1d3557;
-}
-.glossary__item .glossary__icon svg {
-  width: 100%;
-  height: 100%;
-  stroke-width: 1.8;
-}
-
-h3 {
-  color: #1d3557;
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
-}
-
-p {
-  color: #222;
-  margin: 0;
-  font-size: 1rem;
-}
-
-/*&:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  }
-
-   // vycentrování posledního boxu, pokud zůstane lichý počet
-  & > .tip:nth-last-child(1):nth-child(odd) {
-    grid-column: 1 / -1;
-    justify-self: center;
-    max-width: 48%;
-  }
+.tip:hover > .tip:nth-last-child(1):nth-child(odd) {
+  grid-column: 1/-1;
+  justify-self: center;
+  max-width: 48%;
 }
 
 @media (max-width: 768px) {
   .tipy {
     grid-template-columns: 1fr;
-
-    // v mobilu centrování není třeba
-    & > .tip:nth-last-child(1):nth-child(odd) {
-      grid-column: auto;
-      justify-self: stretch;
-      max-width: 100%;
-    }
+  }
+  .tipy > .tip:nth-last-child(1):nth-child(odd) {
+    grid-column: auto;
+    justify-self: stretch;
+    max-width: 100%;
   }
 }
-
-
-// Stránka Typy karet
 .intro {
   text-align: center;
   max-width: 700px;
   margin: 0 auto 2rem auto;
-
-  h2 {
-    font-size: 2.2rem;
-    color: $color2;
-  }
-
-  p {
-    font-size: 1.1rem;
-    color: $color1;
-  }
+}
+.intro h2 {
+  font-size: 2.2rem;
+  color: rgb(5, 5, 167);
+}
+.intro p {
+  font-size: 1.1rem;
+  color: #222;
 }
 
-/*card-types__list {
-  display: grid;
-  gap: 5rem;
-  max-width: 800px;
+.quote {
   margin: 2rem auto;
-  padding: 1rem;
+  max-width: 600px;
+  font-style: italic;
+  padding: 1rem 2rem;
+  border-left: 4px solid rgb(5, 5, 167);
+  background-color: #f7f7f7;
+  color: #1d3557;
+}
 
-  @media (min-width: 700px) {
-    grid-template-columns: 1fr 1fr;
+.page--skladovani .intro--image {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+.page--skladovani .intro--image .intro__image {
+  max-width: 300px;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 768px) {
+  .page--skladovani .intro--image {
+    flex-direction: column;
+    text-align: center;
   }
-}*/
+}
+.page--skladovani .storage {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 2rem;
+}
+.page--skladovani .storage__tip {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.page--skladovani .storage__tip--reverse {
+  flex-direction: row-reverse;
+}
+@media (max-width: 768px) {
+  .page--skladovani .storage__tip {
+    flex-direction: column !important;
+    text-align: center;
+  }
+}
+.page--skladovani .storage__image {
+  width: 200px;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.page--skladovani .storage__text {
+  flex: 1;
+}
+.page--skladovani .storage__title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: rgb(5, 5, 167);
+}
+.page--skladovani .storage__desc {
+  color: #222;
+}
+
 .footer {
   background-color: #1d3557;
   color: #fff;
   text-align: center;
   padding: 1rem;
   margin-top: 2rem;
+}
+
+.footer p {
+  color: #fff;
+}
+
+.footer__copy {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.footer__social {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.footer__icon {
+  color: #fff;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+  transition: transform 0.3s;
+  display: inline-block;
+}
+
+.footer__icon:hover {
+  color: #a8dadc;
+  transform: scale(1.2);
 }/*# sourceMappingURL=style.css.map */
