@@ -2,7 +2,7 @@
 
 .header__top {
   display: flex;
- justify-content: space-between;
+  justify-content: space-between;
   padding: 1rem;
   background-color: colors.$color6;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
@@ -75,5 +75,5 @@
     margin: 0 0 0 4rem;
     align-self: flex-start;
     max-width: 60%;
-  }
+   }
 }
