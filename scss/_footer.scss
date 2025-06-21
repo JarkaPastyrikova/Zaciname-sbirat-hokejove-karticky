@@ -1,0 +1,31 @@
+@use "colors";
+
+.footer {
+  background-color: colors.$color9;
+  color: colors.$color7;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+
+  &__copy {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+
+  &__social {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+
+    .footer__icon {
+      color: colors.$color7;
+      font-size: 1.2rem;
+      transition: color 0.3s, transform 0.3s;
+
+      &:hover {
+        color: colors.$color10;
+        transform: scale(1.2);
+      }
+    }
+  }
+}

@@ -1,0 +1,137 @@
+@use "colors";
+
+main {
+  padding: 1rem;
+  max-width: 100%;
+  margin: auto;
+  background: colors.$color7;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.quote {
+  margin: 2rem auto;
+  max-width: 100%;
+  font-style: italic;
+  padding: 1rem;
+  border-left: 4px solid colors.$color2;
+  background-color: colors.$color5;
+  color: colors.$color9;
+}
+
+.intro {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 1rem;
+  font-size: 1rem;
+  text-align: center;
+  color: colors.$color9;
+}
+
+.tipy {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.tip {
+  background-color: colors.$color4;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-left: 6px solid colors.$color2;
+
+  h3 {
+    margin-top: 0;
+    color: colors.$color2;
+    font-size: 1.25rem;
+  }
+
+  p {
+    font-size: 1rem;
+    color: colors.$color1;
+  }
+}
+
+// Desktop verze (min-width: 1100px)
+@media (min-width: 1100px) {
+  .tipy {
+    grid-template-columns: 1fr 1fr;
+    max-width: 1000px;
+    margin: 0 auto 4rem;
+    padding: 1rem;
+  }
+
+  main {
+    max-width: 960px;
+    padding: 2rem;
+  }
+
+  /*.page--skladovani .intro--image {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .storage__tip {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .storage__tip--reverse {
+    flex-direction: row-reverse;
+  }
+
+  .storage__image {
+    max-width: 200px;
+  }*/  
+}
+
+
+
+
+/* jiné stylování stránky Skladování
+.page--skladovani .intro--image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem;
+
+  .intro__image {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+}
+
+.storage {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+
+  &__tip {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  &__image {
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+
+  &__title {
+    font-size: 1.25rem;
+    color: colors.$color2;
+  }
+
+  &__desc {
+    color: colors.$color1;
+  }
+}*/
