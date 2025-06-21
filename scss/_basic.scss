@@ -1,0 +1,19 @@
+@use "colors";
+
+html {
+  box-sizing: border-box;
+}
+
+*, ::before, ::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  color: colors.$color1;
+  background-color: colors.$color4;
+  line-height: 1.6;
+}
+
